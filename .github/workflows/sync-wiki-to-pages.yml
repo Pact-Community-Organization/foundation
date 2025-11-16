@@ -48,7 +48,10 @@ jobs:
             if [ -f "$file" ]; then
               # Replace Wiki-style links with .md extension if not already present
               # This handles links like [About](About) -> [About](About.md)
+              # First pass: handles most cases
               sed -i -E 's/\]\(([A-Za-z0-9-]+)\)([^.]|$)/](\1.md)\2/g' "$file"
+              # Second pass: handles links at end of sentence with period
+              sed -i -E 's/\]\(([A-Za-z0-9-]+)\)\./](\1.md)./g' "$file"
               # Fix Home.md references to wiki-home.md
               sed -i 's/\[Home\](Home\.md)/[Home](wiki-home.md)/g' "$file"
             fi

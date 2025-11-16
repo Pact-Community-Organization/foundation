@@ -23,7 +23,7 @@ Welcome! Your contributions help the Kadena Pact Community Foundation grow and i
 
 ## Code of Conduct
 - Be respectful, inclusive, and collaborative.  
-- All discussions and contributions should follow the [Foundation Code of Conduct](Code-of-Conduct).
+- All discussions and contributions should follow the [Foundation Code of Conduct](Code-of-Conduct.md).
 
 ## Quick Links
 - [Home](wiki-home.md)  
