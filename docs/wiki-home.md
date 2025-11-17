@@ -23,18 +23,18 @@ We provide guidance, documentation, and resources to remove friction, reduce ris
 ---
 
 ## Get Started
-1. Explore our [About](About) page to learn more about the foundation.  
-2. Read our [Contribute](Contribute) page to understand how to participate.  
+1. Explore our [About](About.md) page to learn more about the foundation.  
+2. Read our [Contribute](Contribute.md) page to understand how to participate.  
 3. Join discussions via [GitHub Discussions](https://github.com/Kadena-Pact-Community-Foundation/foundation/discussions).  
 4. Check out our [Pages site](https://Kadena-Pact-Community-Foundation.github.io/foundation) for a public view of the foundation.
 
 ---
 
 ## Quick Links
-- [About the Foundation](About)  
-- [Contribution Guide](Contribute)  
-- [Roadmap](Roadmap)  
-- [Contact / Community](Contact)  
+- [About the Foundation](About.md)  
+- [Contribution Guide](Contribute.md)  
+- [Roadmap](Roadmap.md)  
+- [Contact / Community](Contact.md)  
 
 ---
 
