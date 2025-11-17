@@ -56,6 +56,10 @@ jobs:
             sed -i 's/\[Home\](Home\.md)/[Home](wiki-home.md)/g' "$file"
           done
 
+      - name: Remove temporary wiki clone directory
+        run: |
+          rm -rf wiki-repo || true
+
       - name: Update docs index with Wiki links
         run: |
           cat > docs/index.md << 'EOF'
@@ -111,3 +115,4 @@ jobs:
           base: main
           labels: documentation, automation
           delete-branch: true
+          token: ${{ secrets.ACTIONS_BOT_TOKEN }}
