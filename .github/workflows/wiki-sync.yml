@@ -1,8 +1,14 @@
 name: Sync Wiki to Docs
 
 on:
-  gollum: {}
-  workflow_dispatch: {}
+  # Run when Wiki is updated (GitHub sends a gollum event)
+  gollum:
+  # Allow manual triggering
+  workflow_dispatch:
+  # Run on push to main branch (to keep in sync)
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -11,35 +17,76 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout main repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up git user
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Clone wiki repository
+      - name: Clone Wiki repository
         run: |
-          git clone --depth 1 "https://github.com/${{ github.repository }}.wiki.git" wiki
+          git clone --depth 1 "https://github.com/${{ github.repository }}.wiki.git" wiki-repo
 
-      - name: Mirror selected wiki pages into docs/
+      - name: Copy Wiki content to docs
         run: |
           mkdir -p docs
-          cp -f wiki/About.md docs/About.md || true
-          cp -f wiki/Code-of-Conduct.md docs/Code-of-Conduct.md || true
-          cp -f wiki/Contribute.md docs/Contribute.md || true
-          cp -f wiki/Roadmap.md docs/Roadmap.md || true
-          # Home.md maps to wiki-home.md for Pages navigation
-          if [ -f wiki/Home.md ]; then cp -f wiki/Home.md docs/wiki-home.md; fi
+          cp wiki-repo/*.md docs/ || true
+          # Rename Home.md to be included in navigation
+          if [ -f "docs/Home.md" ]; then
+            mv docs/Home.md docs/wiki-home.md
+          fi
 
-      - name: Commit changes if any
+      - name: Transform Wiki links for Pages
         run: |
           set -e
-          git add docs/*.md || true
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
+          cd docs
+          shopt -s nullglob
+          for file in *.md; do
+            [ -f "$file" ] || continue
+            # Replace Wiki-style links [Text](PageName) -> [Text](PageName.md)
+            sed -i -E 's/\]\(([A-Za-z0-9_-]+)\)([^.)]|$)/](\1.md)\2/g' "$file"
+            # Handle cases ending with a period
+            sed -i -E 's/\]\(([A-Za-z0-9_-]+)\)\./](\1.md)./g' "$file"
+            # Fix Home.md references to wiki-home.md
+            sed -i 's/\[Home\](Home\.md)/[Home](wiki-home.md)/g' "$file"
+          done
+
+      - name: Update docs index with Wiki links
+        run: |
+          cat > docs/index.md << 'EOF'
+          # Kadena Pact Community Foundation
+
+          Welcome. This is the official GitHub Pages site for our community foundation.
+
+          ## Mission
+          Make it easy and safe for businesses to start building on Kadena.
+
+          ## Vision
+          A thriving Kadena ecosystem where new and existing businesses can launch confidently, supported by trusted, audited smart contracts and ready-to-use building blocks.
+
+          ## Wiki Content
+          - [Home](wiki-home.md)
+          - [About](About.md)
+          - [Contribute](Contribute.md)
+          - [Code of Conduct](Code-of-Conduct.md)
+          - [Roadmap](Roadmap.md)
+
+          ## Resources
+          - [GitHub Repository](https://github.com/Kadena-Pact-Community-Foundation/foundation)
+          - [Wiki](https://github.com/Kadena-Pact-Community-Foundation/foundation/wiki)
+          - [Discussions](https://github.com/Kadena-Pact-Community-Foundation/foundation/discussions)
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
             exit 0
           fi
-          git commit -m "chore: sync wiki pages into docs [skip ci]"
-          git push origin HEAD:${GITHUB_REF_NAME:-main}
+          git commit -m "Sync Wiki content to Pages [automated]"
+          git push origin HEAD:main
