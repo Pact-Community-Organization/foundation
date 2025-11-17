@@ -17,10 +17,10 @@ We aim to make it **easy, safe, and efficient** to start using Pact smart contra
 - **Practical and Reusable:** Our resources are designed to be immediately useful for businesses.
 
 ## Quick Links
-- [Home](wiki-home.md)  
-- [Contribute](Contribute.md)  
-- [Roadmap](Roadmap.md)  
-- [Contact / Community](Contact.md)  
+- [Home](Home)  
+- [Contribute](Contribute)  
+- [Roadmap](Roadmap)  
+- [Contact / Community](Contact)  
 
 ---
 
