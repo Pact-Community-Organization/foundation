@@ -1,5 +1,7 @@
 # Kadena Pact Community Foundation
 
+[![Sync Wiki to Docs](https://github.com/Kadena-Pact-Community-Foundation/foundation/actions/workflows/wiki-sync.yml/badge.svg)](https://github.com/Kadena-Pact-Community-Foundation/foundation/actions/workflows/wiki-sync.yml)
+
 Welcome. This repository is the front door for our community work on Kadena smart contracts and tooling.
 
 ## Mission
@@ -16,7 +18,8 @@ A thriving Kadena ecosystem where new and existing businesses can launch confide
 ## Wiki to Pages Sync
 Wiki content is automatically mirrored to GitHub Pages for public visibility. The sync happens:
 - When Wiki pages are updated (via `gollum` event)
-- When changes are pushed to the main branch
-- Manually via the Actions tab (workflow_dispatch)
+- Manually via the Actions tab (`workflow_dispatch`)
 
-The workflow copies all Wiki markdown files to the `docs/` directory and transforms Wiki-style links to work with GitHub Pages.
+Use the badge above or visit the Action to trigger a manual sync: https://github.com/Kadena-Pact-Community-Foundation/foundation/actions/workflows/wiki-sync.yml
+
+The workflow mirrors selected Wiki markdown files to the `docs/` directory for Pages.
