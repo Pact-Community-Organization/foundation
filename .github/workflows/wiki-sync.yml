@@ -1,0 +1,45 @@
+name: Sync Wiki to Docs
+
+on:
+  gollum: {}
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Clone wiki repository
+        run: |
+          git clone --depth 1 "https://github.com/${{ github.repository }}.wiki.git" wiki
+
+      - name: Mirror selected wiki pages into docs/
+        run: |
+          mkdir -p docs
+          cp -f wiki/About.md docs/About.md || true
+          cp -f wiki/Code-of-Conduct.md docs/Code-of-Conduct.md || true
+          cp -f wiki/Contribute.md docs/Contribute.md || true
+          cp -f wiki/Roadmap.md docs/Roadmap.md || true
+          # Home.md maps to wiki-home.md for Pages navigation
+          if [ -f wiki/Home.md ]; then cp -f wiki/Home.md docs/wiki-home.md; fi
+
+      - name: Commit changes if any
+        run: |
+          set -e
+          git add docs/*.md || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: sync wiki pages into docs [skip ci]"
+          git push origin HEAD:${GITHUB_REF_NAME:-main}
