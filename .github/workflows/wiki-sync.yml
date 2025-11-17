@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   sync:
@@ -82,7 +83,7 @@ jobs:
           - [Discussions](https://github.com/Kadena-Pact-Community-Foundation/foundation/discussions)
           EOF
 
-      - name: Commit and push changes
+      - name: Commit changes (no push)
         run: |
           git add docs/
           if git diff --staged --quiet; then
@@ -90,4 +91,23 @@ jobs:
             exit 0
           fi
           git commit -m "Sync Wiki content to Pages [automated]"
-          git push origin HEAD:main
+
+      - name: Create pull request for synced docs
+        if: success()
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Sync Wiki content to Pages [automated]"
+          title: "chore: Sync Wiki → Pages (automated)"
+          body: |
+            This automated PR syncs Wiki content into `docs/` and updates the site index.
+
+            - Copies all wiki `*.md` files into `docs/`
+            - Renames `Home.md` to `wiki-home.md`
+            - Transforms internal wiki links to `.md` files and maps Home → `wiki-home.md`
+            - Rebuilds `docs/index.md` including Contact and updated Vision
+
+            Merging this PR will publish the latest wiki content to GitHub Pages.
+          branch: bot/wiki-sync
+          base: main
+          labels: documentation, automation
+          delete-branch: true
