@@ -6,7 +6,7 @@ Welcome. This is the official GitHub Pages site for our community foundation.
 Make it easy and safe for businesses to start building on Kadena.
 
 ## Vision
-A Kadena environment where businesses start strong, using proven Pact contracts that are safe, reliable, and ready to deploy.
+A Kadena environment where businesses start strong, using proven open source Pact contracts that are safe, reliable, and ready to deploy.
 
 ## Wiki Content
 - [Home](wiki-home.md)
