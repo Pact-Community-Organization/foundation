@@ -1,4 +1,4 @@
-# Kadena Pact Community Foundation
+# Pact Community Organization
 
 Welcome. This is the official GitHub Pages site for our community foundation.
 
