@@ -2,10 +2,10 @@
 
 We coordinate openly through GitHub.
 
-- Discussions (questions, ideas, proposals): https://github.com/Kadena-Pact-Community-Foundation/foundation/discussions
-- Issues (bugs, requests, tasks): https://github.com/Kadena-Pact-Community-Foundation/foundation/issues
-- Pages (public site): https://Kadena-Pact-Community-Foundation.github.io/foundation
-- Wiki (documentation): https://github.com/Kadena-Pact-Community-Foundation/foundation/wiki
+- Discussions (questions, ideas, proposals): https://github.com/Pact-Community-Organization/foundation/discussions
+- Issues (bugs, requests, tasks): https://github.com/Pact-Community-Organization/foundation/issues
+- Pages (public site): https://pact-community-organization.github.io/foundation
+- Wiki (documentation): https://github.com/Pact-Community-Organization/foundation/wiki
 
 For sensitive matters related to moderation or conduct, please open a private thread with a maintainer via GitHub.
 
