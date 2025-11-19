@@ -15,8 +15,8 @@ To help you find the right place for your contribution, here is a high-level ove
 *   **[Kadena-Pact-Community-Foundation/foundation](https://github.com/Kadena-Pact-Community-Foundation/foundation)**
     This is our central repository. It contains our mission, vision, governance documents, and general community guidelines. If you want to contribute to the foundation's principles, propose a change to our governance, or improve our general documentation, this is the place to start.
 
-*   **[Kadena-Pact-Community-Foundation/kadena-community-website](https://github.com/Kadena-Pact-Community-Foundation/kadena-community-website)**
-    This repository contains the source code for our public-facing website, [kadena-community.org](https://kadena-community.org). Contributions here are focused on web development, UI/UX improvements, fixing bugs on the site, or updating website content.
+*   **[Pact-Community-Organization/website](https://github.com/Pact-Community-Organization/website)**
+    This repository contains the source code for our public-facing website, [pact-community.org](https://pact-community.org). Contributions here are focused on web development, UI/UX improvements, fixing bugs on the site, or updating website content.
 
 ## How Can I Contribute?
 
