@@ -1,7 +1,7 @@
-# Pact Community Organization – Code of Conduct
+# Kadena Pact Community Foundation – Code of Conduct
 
-The Pact Community Organization is committed to building a safe, welcoming, and collaborative environment for everyone.  
-Our mission is to make it easy and safe for businesses to start building with Pact — and that begins with how we treat each other.
+The Kadena Pact Community Foundation is committed to building a safe, welcoming, and collaborative environment for everyone.  
+Our mission is to make it easy and safe for businesses to start building on Kadena — and that begins with how we treat each other.
 
 This Code of Conduct applies to all Foundation spaces, including:
 - GitHub repositories and Wikis  
@@ -29,7 +29,7 @@ We provide a community where people feel comfortable asking questions, contribut
 
 ### **Mission Alignment**
 Contributions should support the Foundation’s goal:
-> *To make it easy and safe for businesses to start building with Pact.*
+> *To make it easy and safe for businesses to start building on Kadena.*
 
 ---
 
@@ -87,4 +87,4 @@ Community feedback is welcome — this document will be improved collaboratively
 
 ---
 
-By contributing to the Pact Community Organization, you agree to abide by this Code of Conduct and help maintain a positive and productive community.
+By contributing to the Kadena Pact Community Foundation, you agree to abide by this Code of Conduct and help maintain a positive and productive community.

@@ -17,7 +17,6 @@ A trusted Pact ecosystem where businesses can confidently start using audited, r
 - [Contact / Community](Contact.md)
 
 ## Resources
-- [GitHub Repository](https://github.com/Pact-Community-Organization/foundation)
-- [Wiki](https://github.com/Pact-Community-Organization/foundation/wiki)
-- [Discussions](https://github.com/Pact-Community-Organization/foundation/discussions)
-# Migration touch
+- [GitHub Repository](https://github.com/${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY##*/})
+- [Wiki](https://github.com/${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY##*/}/wiki)
+- [Discussions](https://github.com/${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY##*/}/discussions)

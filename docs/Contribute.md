@@ -33,4 +33,4 @@ Welcome! Your contributions help the Kadena Pact Community Foundation grow and i
 
 ---
 
-*Thank you for helping us make it easy and safe for businesses to build with Pact!* 
+*Thank you for helping us make it easy and safe for businesses to build on Kadena!*
