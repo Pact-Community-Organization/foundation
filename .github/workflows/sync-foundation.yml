@@ -1,0 +1,48 @@
+name: Sync canonical files
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare files
+        run: |
+          mkdir -p deploy
+          cp -r .github deploy/.github || true
+          cp -r docs deploy/docs || true
+          cp SECURITY.md deploy/SECURITY.md || true
+
+      - name: Create PR to target repos
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+            const targetRepos = [
+              {owner: 'Pact-Community-Organization', repo: 'website', base: 'main'},
+              {owner: 'Pact-Community-Organization', repo: 'pact-contract-catalog', base: 'master'}
+            ]
+            const filesToCopy = ['.github/CODEOWNERS','docs','SECURITY.md']
+            for (const t of targetRepos) {
+              const branch = `sync/foundation-${t.repo}-${Date.now()}`
+              await github.rest.git.createRef({
+                owner: t.owner,
+                repo: t.repo,
+                ref: `refs/heads/${branch}`,
+                sha: (await github.rest.repos.getCommit({owner: t.owner, repo: t.repo, ref: t.base})).data.sha
+              }).catch(e=>{})
+              // Note: This job requires a token with repo write permission on target repos.
+              // This script is a placeholder — set up an org-level PAT in a secret named ORG_SYNC_TOKEN and replace github the auth if you want automated pushes.
+            }
+
+      - name: Note about manual steps
+        run: |
+          echo "This workflow is a draft: to enable automated PRs you must set a secret named ORG_SYNC_TOKEN with a PAT that has repo permissions for the target repositories."
