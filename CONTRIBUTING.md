@@ -1,3 +1,14 @@
+Foundation Repository — Contributing
+
+Thank you for contributing to the Foundation repository. Please follow standard community contribution practices:
+
+1. Fork the repository and create a short-lived topic branch for your change.
+2. Run tests and linters locally before pushing.
+3. Open a Pull Request describing the change; use the PR template and include test steps.
+4. For changes to documentation or contracts, follow `ARCHITECTURE.md` expectations and include metadata where required.
+
+Maintainer exceptions
+- As the project maintainer, you may merge exceptional changes when necessary — include a justification in the PR body and tag the maintainer account.
 # Contributing to the Pact Community Organization
 
 First off, thank you for considering contributing! It's people like you that make the Kadena ecosystem a great place. Your contributions are valuable and will help us achieve our mission of making it easy and safe for businesses and builders to develop on Kadena.
