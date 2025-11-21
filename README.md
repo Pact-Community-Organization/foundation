@@ -2,8 +2,7 @@
 
 [![Sync Wiki to Docs](https://github.com/Pact-Community-Organization/foundation/actions/workflows/wiki-sync.yml/badge.svg)](https://github.com/Pact-Community-Organization/foundation/actions/workflows/wiki-sync.yml)
 
-
-Welcome to the Pact Community Organization. This repository is the front door for our community’s smart contract libraries, documentation, and processes.
+Welcome to the Pact Community Organization. This repository is the front door for our community’s smart contract libraries, documentation, and processes for working with Pact.
 
 NOTE: Canonical documentation and learning materials have been consolidated in the Pact-5 repository:
 
@@ -13,7 +12,7 @@ NOTE: Canonical documentation and learning materials have been consolidated in t
 Make it easy and safe for businesses to start building with Pact.
 
 ## Vision
-A thriving Pact ecosystem where new and existing businesses can launch confidently, supported by trusted, audited smart contracts and ready-to-use building blocks.
+A trusted Pact ecosystem where businesses can confidently start using audited, reliable open source Pact contracts.
 
 ## Documentation & Links
 - Wiki (official documentation): https://github.com/Pact-Community-Organization/foundation/wiki
