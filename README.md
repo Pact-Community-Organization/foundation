@@ -24,6 +24,10 @@ A vibrant Kadena ecosystem where builders confidently deploy trusted, reusable P
 - `policies/`: Compliance and operational policies.
 - `community/`: Contribution guidelines and community resources.
 
+## Onboarding and Maintenance
+
+See the docs and wiki for onboarding and maintenance instructions.
+
 ## Get Involved
 
 We welcome contributions from the community! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.

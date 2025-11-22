@@ -17,10 +17,10 @@ Thank you for your interest in contributing to the Pact Community Organization (
 
 ## Development Workflow
 
-1. Fork the repository and clone it locally.
-2. Create a new branch for your changes.
-3. Make your changes and commit them with a descriptive message.
-4. Push your branch to your fork and open a pull request.
+1. Fork the repository and create a topic branch.
+2. Make your changes and commit them with a descriptive message.
+3. Push your branch to your fork and open a pull request with a clear description and link to any related issue.
+4. Include tests or validation where applicable (see repo-specific CI).
 
 ## Review Process
 
