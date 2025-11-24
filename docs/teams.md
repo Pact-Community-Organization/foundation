@@ -1,21 +1,30 @@
-# Teams and Initial Permissions
+# Teams and Current Permissions
 
-This document describes the teams to create for the Pact Community Organization and suggested initial permissions.
+This document describes the current teams in the Pact Community Organization and their actual permissions as of November 2025.
 
-## Teams to create
+## Current Teams
 
-- **Core-Maintainers**: permission `maintain` on core repositories. Responsibilities: code review, merges, releases, governance.
-- **Website-Team**: permission `maintain` on `website`. Responsibilities: website content, pages, deployments.
-- **Catalog-Team**: permission `maintain` on `pact-contract-catalog`. Responsibilities: catalog maintenance, metadata validation, contract onboarding.
-- **Security-WG**: permission `triage` (or `maintain`) across repos as needed. Responsibilities: vulnerability triage and coordination.
+- **Core-Maintainers**: `maintain` permission on `foundation` repository. Responsibilities: code review, merges, releases, governance.
+- **Website-Team**: `maintain` permission on `website` repository. Responsibilities: website content, pages, deployments.
+- **Catalog-Team**: `maintain` permission on `pact-contract-catalog` repository. Responsibilities: catalog maintenance, metadata validation, contract onboarding.
+- **Security-WG**: Security triage permissions across repositories. Responsibilities: vulnerability triage and coordination.
 
-## Initial assignments
+## Current Assignments
 
-- `DaisukeFlowers`: org owner and team maintainer for all teams.
+- `DaisukeFlowers`: Organization owner and member of all teams.
+
+## Repository Permissions
+
+Each team has `maintain` permissions on their assigned repository, which includes:
+- Read access to repository
+- Write access (create branches, push commits)
+- Triage access (manage issues and PRs)
+- Maintain access (merge PRs, manage repository settings)
 
 ## Notes
 
-- Creating teams requires org admin privileges. After this PR is merged, a follow-up step will create the teams via `gh team create` (or org admin UI). This PR documents the desired team names and permissions.
-
-References: Issue: https://github.com/Pact-Community-Organization/foundation/issues/57
+- All teams currently have `pull` (read-only) permissions at the organization level
+- Repository-specific permissions are granted via team membership
+- Teams were created following the original plan documented in the issue history
+- As the organization grows, additional permission levels may be implemented
 

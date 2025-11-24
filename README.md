@@ -16,6 +16,7 @@ A vibrant Kadena ecosystem where builders confidently deploy trusted, reusable P
 - **Policies**: Standards and processes for operations in `policies/`.
 - **Community**: How to get involved and contribute in `community/`.
 - **Documentation**: Organizational policies and public-facing resources in `docs/`.
+- **Onboarding**: Complete guide to joining and advancing in the organization in `docs/ONBOARDING.md`.
 
 ## Repository Structure
 
@@ -29,7 +30,7 @@ A vibrant Kadena ecosystem where builders confidently deploy trusted, reusable P
 
 ## Onboarding and Maintenance
 
-See the docs and wiki for onboarding and maintenance instructions.
+See the docs and wiki for onboarding and maintenance instructions. New community members should start with [ONBOARDING.md](docs/ONBOARDING.md) for a complete guide to participation and role progression.
 
 ## Get Involved
 
