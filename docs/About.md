@@ -28,5 +28,5 @@ We aim to make it **easy, safe, and efficient** to start using Pact smart contra
 
 ---
 
-*We are building a foundation where everyone can confidently launch on Kadena.*
+*We are building a foundation where everyone can confidently launch smart contracts.*
 

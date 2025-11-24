@@ -4,11 +4,11 @@ Welcome to the Foundation repository of the Pact Community Organization (PCO). T
 
 ## Mission
 
-To make it easy and safe for businesses to start building on Kadena.
+To make it easy and safe for businesses to start building with smart contracts.
 
 ## Vision
 
-A vibrant Kadena ecosystem where builders confidently deploy trusted, reusable Pact contracts maintained by a transparent, community-driven, nonprofit organization.
+A vibrant blockchain ecosystem where builders confidently deploy trusted, reusable smart contracts maintained by a transparent, community-driven, nonprofit organization.
 
 ## Contents
 

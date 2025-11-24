@@ -62,7 +62,7 @@ The PCO follows a structured yet flexible approach to community participation, a
 
 #### Currently Available Team Roles
 - **Core-Maintainers**: `maintain` permissions on foundation repository
-  - Technical Excellence: Code quality, Pact/Kadena understanding
+  - Technical Excellence: Code quality, Pact/smart contract development
   - Consistency: Regular contributions over 3+ months
   - Code Review: Helpful PR reviews and constructive feedback
   - Communication: Clear documentation and community engagement
